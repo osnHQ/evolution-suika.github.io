@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Evolution Suika</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Matter.js Physics Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="start-screen" class="overlay visible">
+        <div class="card">
+          <h1>Evolution Suika</h1>
+          <p>Merge creatures through evolution. Don’t let them cross the top!</p>
+          <button id="play-button">Play</button>
+        </div>
+      </div>
+
+      <div id="game-ui">
+        <div id="hud">
+          <div id="score-label">Score</div>
+          <div id="score-value">0</div>
+          <div id="next-container">
+            <div class="next-label">Next</div>
+            <div id="next-preview"></div>
+          </div>
+        </div>
+        <div id="game-container">
+          <!-- Matter.js will inject canvas here -->
+        </div>
+      </div>
+
+      <div id="game-over-screen" class="overlay">
+        <div class="card">
+          <h2>Game Over</h2>
+          <p class="summary-line">
+            Final Score:
+            <span id="final-score">0</span>
+          </p>
+          <p class="summary-line">
+            Highest Evolution:
+            <span id="final-highest">Cell</span>
+          </p>
+          <button id="restart-button">Restart</button>
+        </div>
+      </div>
+
+      <div id="drop-indicator"></div>
+      <div id="screen-flash"></div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+  </html>
+
+
