@@ -13,15 +13,24 @@
       <div id="start-screen" class="overlay visible">
         <div class="card">
           <h1>Evolution Suika</h1>
-          <p>Merge creatures through evolution. Don’t let them cross the top!</p>
+          <p>Drag to aim, release to drop. Merge creatures through evolution. Don’t let them cross the top!</p>
           <button id="play-button">Play</button>
         </div>
       </div>
 
       <div id="game-ui">
         <div id="hud">
-          <div id="score-label">Score</div>
-          <div id="score-value">0</div>
+          <div id="score-block">
+            <div id="score-label">Score</div>
+            <div id="score-value">0</div>
+          </div>
+          <div id="best-block">
+            <div class="best-label">Best</div>
+            <div id="best-value">0</div>
+          </div>
+          <button id="sound-toggle" class="icon-button" aria-label="Toggle sound">
+            🔊
+          </button>
           <div id="next-container">
             <div class="next-label">Next</div>
             <div id="next-preview"></div>
@@ -40,15 +49,34 @@
             <span id="final-score">0</span>
           </p>
           <p class="summary-line">
-            Highest Evolution:
+            Highest This Run:
             <span id="final-highest">Cell</span>
           </p>
+          <p class="summary-line">
+            Best Score:
+            <span id="final-best-score">0</span>
+          </p>
+          <p class="summary-line">
+            Lifetime Highest:
+            <span id="final-lifetime-highest">Cell</span>
+          </p>
+          <p id="tip-line">Tip: Merge early to avoid tall stacks.</p>
           <button id="restart-button">Restart</button>
         </div>
       </div>
 
       <div id="drop-indicator"></div>
       <div id="screen-flash"></div>
+
+      <div id="tutorial-overlay" class="overlay">
+        <div class="card">
+          <h2>How to Play</h2>
+          <p>1. Drag left/right to aim your creature.</p>
+          <p>2. Release to drop it into the pit.</p>
+          <p>3. Merge identical creatures to evolve them. Don’t let the stack reach the top!</p>
+          <button id="tutorial-ok">Got it</button>
+        </div>
+      </div>
     </div>
 
     <script src="game.js"></script>
